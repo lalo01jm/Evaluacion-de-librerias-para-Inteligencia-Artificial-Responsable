@@ -1,0 +1,56 @@
+[
+  {
+    "model": "LR_2_features",
+    "metrics": {
+      "accuracy": 0.6696501220504475,
+      "f1": 0.6140684410646388,
+      "false_positive": 157,
+      "false_negative": 249
+    }
+  },
+  {
+    "model": "LR_7_features",
+    "metrics": {
+      "accuracy": 0.661513425549227,
+      "f1": 0.6148148148148148,
+      "false_positive": 176,
+      "false_negative": 240
+    }
+  },
+  {
+    "model": "LR_8_features",
+    "metrics": {
+      "accuracy": 0.661513425549227,
+      "f1": 0.618348623853211,
+      "false_positive": 181,
+      "false_negative": 235
+    }
+  },
+  {
+    "model": "SVM_2_features",
+    "metrics": {
+      "accuracy": 0.6818551668022783,
+      "f1": 0.6342376052385407,
+      "false_positive": 158,
+      "false_negative": 233
+    }
+  },
+  {
+    "model": "SVM_7_features",
+    "metrics": {
+      "accuracy": 0.6013018714401953,
+      "f1": 0.5324427480916031,
+      "false_positive": 197,
+      "false_negative": 293
+    }
+  },
+  {
+    "model": "XGB_8_features",
+    "metrics": {
+      "accuracy": 0.6712774613506917,
+      "f1": 0.6320582877959927,
+      "false_positive": 179,
+      "false_negative": 225
+    }
+  }
+]

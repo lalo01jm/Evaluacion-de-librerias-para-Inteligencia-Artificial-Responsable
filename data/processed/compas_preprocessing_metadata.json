@@ -1,0 +1,46 @@
+{
+  "source_file": "data\\raw\\compas-scores-two-years.csv",
+  "original_shape": [
+    7214,
+    53
+  ],
+  "clean_shape": [
+    7206,
+    53
+  ],
+  "fair_shape": [
+    6142,
+    53
+  ],
+  "features_2": [
+    "age",
+    "priors_count"
+  ],
+  "features_7": [
+    "sex",
+    "age",
+    "juv_fel_count",
+    "juv_misd_count",
+    "priors_count",
+    "c_charge_degree",
+    "c_charge_desc"
+  ],
+  "features_8": [
+    "sex",
+    "age",
+    "juv_fel_count",
+    "juv_misd_count",
+    "priors_count",
+    "c_charge_degree",
+    "c_charge_desc",
+    "race"
+  ],
+  "target": "two_year_recid",
+  "output_files": {
+    "features_2": "data\\processed\\compas_features_2.csv",
+    "features_7": "data\\processed\\compas_features_7.csv",
+    "preprocessed": "data\\processed\\compas_preprocessed.csv",
+    "train": "data\\processed\\compas_preprocessed_train.csv",
+    "test": "data\\processed\\compas_preprocessed_test.csv"
+  }
+}
