@@ -1,0 +1,5 @@
+Asegurarme que entiendo todo el proceso
+
+Buscar variables mas predictivas (Tal vez se obtenga una intuición de por qué se usan ciertas variables)
+Crear tabla de correlaciones de todas las columnas
+Empatar KDD con preprocesamiento de propublica/paper
