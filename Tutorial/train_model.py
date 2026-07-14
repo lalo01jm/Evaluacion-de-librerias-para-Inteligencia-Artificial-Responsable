@@ -39,22 +39,18 @@ def compute_metrics(y_true, y_pred):
     # verdaderos positivos de la matriz de confusión.
     tn, fp, fn, tp = cm.ravel()
 
-    # La precisión indica qué proporción de las predicciones positivas fue correcta.
     precision = np.nan_to_num(
         tp / (tp + fp),
     )
 
-    # El recall indica qué proporción de los casos positivos reales fue detectada.
     recall = np.nan_to_num(
         tp / (tp + fn),
     )
 
-    # F1 combina precisión y recall mediante su media armónica.
     f1 = np.nan_to_num(
         2 * precision * recall / (precision + recall),
     )
 
-    # Se devuelven valores float estándar para facilitar su serialización.
     return {
         "accuracy": float(
             accuracy_score(y_true, y_pred)
