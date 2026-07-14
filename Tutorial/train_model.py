@@ -175,27 +175,22 @@ def train_model(
         cv.split(X, y),
         start=1,
     ):
-        # Se clona el estimador para comenzar cada fold con un modelo sin entrenar.
         fold_model = clone(model)
 
-        # Se ajusta el modelo únicamente con las filas asignadas a entrenamiento.
         fold_model.fit(
             X.iloc[train_idx],
             y.iloc[train_idx],
         )
 
-        # Se predicen las clases de las filas reservadas para prueba.
         preds = fold_model.predict(
             X.iloc[test_idx],
         ).astype(int)
 
-        # Se calculan las métricas predictivas del fold actual.
         metrics = compute_metrics(
             y.iloc[test_idx],
             preds,
         )
 
-        # Se registra el número de fold junto con sus métricas.
         metrics["fold"] = fold
         fold_metrics.append(metrics)
 
@@ -225,7 +220,6 @@ def train_model(
         # Aequitas utiliza la columna score para representar la decisión binaria.
         audit_fold["score"] = preds
 
-        # Se guarda el bloque del fold para concatenarlo al terminar.
         audit_folds.append(audit_fold)
 
     # Se crea una tabla numérica con las métricas de todos los folds. El número
