@@ -57,10 +57,7 @@ def auditar_modelo(
     if missing:
         raise ValueError(f"Faltan columnas requeridas: {sorted(missing)}")
 
-    # Se conserva únicamente la información que Aequitas utilizará.
     df = df.loc[:, cols].copy()
-
-    # Las predicciones y las etiquetas reales deben ser valores binarios enteros.
     df[["score", "label_value"]] = df[["score", "label_value"]].astype(int)
 
     # Los atributos protegidos se convierten a texto para tratarlos como grupos
@@ -83,7 +80,7 @@ def auditar_modelo(
         mask_significance=True,
     )
 
-    # Se crea el objeto encargado de convertir las disparidades en evaluaciones
+    # Objeto encargado de convertir las disparidades en evaluaciones
     # de equidad de acuerdo con el umbral tau.
     fairness = Fairness()
 
@@ -102,9 +99,7 @@ def auditar_modelo(
     overall_fairness = fairness.get_overall_fairness(
         attribute_fairness,
     )
-
-    # Se devuelven por separado las distintas etapas de la auditoría para que
-    # puedan inspeccionarse o exportarse según las necesidades del análisis.
+    
     return {
         "group_metrics": group_metrics,
         "disparities": disparities,

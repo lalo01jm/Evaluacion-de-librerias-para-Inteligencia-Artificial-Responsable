@@ -23,7 +23,9 @@ AUDIT_COLUMNS = [
     "score",
 ]
 
-
+# Esta función es un ejemplo de cómo calcular métricas de clasificación binaria a partir de etiquetas y predicciones. 
+# Se utiliza en la función `train_model` para evaluar el desempeño del modelo en cada fold de validación cruzada.
+# (Hace una pequeña parte de lo que hace la librería Aequitas).
 def compute_metrics(y_true, y_pred):
     """
     Calcula métricas de clasificación binaria a partir de etiquetas y predicciones.
