@@ -1,0 +1,64 @@
+id: identificador numérico interno asignado a cada registro o persona.
+name: nombre completo de la persona en el registro.
+first: nombre(s) de la persona.
+last: apellido(s) de la persona.
+compas_screening_date: fecha en que se realizó la evaluación COMPAS.
+
+--sex: sexo registrado de la persona.
+
+dob: fecha de nacimiento.
+
+--age: edad al momento de la evaluación.
+--age_cat: categoría de edad, por ejemplo menor de 25, 25–45 o mayor de 45.
+--race: grupo racial registrado en el expediente.
+--juv_fel_count: número de delitos graves juveniles previos.
+
+decile_score: score general COMPAS de riesgo de reincidencia, de 1 a 10.
+
+--juv_misd_count: número de delitos menores juveniles previos.
+--juv_other_count: número de otros antecedentes juveniles previos.
+--priors_count: número total de antecedentes penales previos no juveniles.
+
+days_b_screening_arrest: diferencia en días entre la evaluación COMPAS y el arresto del caso actual.
+
+--c_jail_in: fecha de ingreso a cárcel relacionada con el caso actual.
+--c_jail_out: fecha de salida de cárcel relacionada con el caso actual.
+
+c_case_number: número de expediente del caso actual.
+c_offense_date: fecha en que ocurrió el delito del caso actual.
+c_arrest_date: fecha del arresto del caso actual.
+c_days_from_compas: diferencia en días entre la fecha del caso actual y la evaluación COMPAS.
+
+--c_charge_degree: gravedad del cargo actual, usualmente F para felony o M para misdemeanor.
+--c_charge_desc: descripción textual del cargo actual.
+
+is_recid: indica si hubo reincidencia registrada en el conjunto original, con valores especiales para casos no observables.
+r_case_number: número de expediente del caso de reincidencia posterior.
+r_charge_degree: gravedad del cargo asociado a la reincidencia posterior.
+r_days_from_arrest: días entre el arresto inicial y el evento de reincidencia posterior.
+r_offense_date: fecha del delito asociado a la reincidencia posterior.
+r_charge_desc: descripción del cargo de reincidencia posterior.
+r_jail_in: fecha de ingreso a cárcel por el caso de reincidencia posterior.
+r_jail_out: fecha de salida de cárcel por el caso de reincidencia posterior.
+violent_recid: indica si hubo reincidencia violenta posterior.
+is_violent_recid: indicador auxiliar de si existe información válida sobre reincidencia violenta.
+vr_case_number: número de expediente del caso de reincidencia violenta posterior.
+vr_charge_degree: gravedad del cargo de reincidencia violenta posterior.
+vr_offense_date: fecha del delito de reincidencia violenta posterior.
+vr_charge_desc: descripción del cargo de reincidencia violenta posterior.
+type_of_assessment: tipo de evaluación COMPAS aplicada, normalmente riesgo general de reincidencia.
+decile_score.1: copia del score general COMPAS de 1 a 10.
+score_text: interpretación categórica del score general: Low, Medium o High.
+screening_date: copia de la fecha de evaluación COMPAS.
+v_type_of_assessment: tipo de evaluación COMPAS enfocada en riesgo de violencia.
+v_decile_score: score COMPAS de riesgo de reincidencia violenta, de 1 a 10.
+v_score_text: interpretación categórica del score de violencia: Low, Medium o High.
+v_screening_date: fecha de la evaluación de riesgo violento, normalmente igual al screening general.
+in_custody: fecha o indicador de inicio del periodo bajo custodia usado para seguimiento.
+out_custody: fecha o indicador de salida de custodia usado para seguimiento.
+priors_count.1: copia de priors_count, es decir, antecedentes penales previos.
+start: inicio del periodo en riesgo de reincidir después de ajustar por tiempo encarcelado.
+end: final del periodo de observación o del seguimiento.
+event: indica si ocurrió el evento de reincidencia durante el periodo de seguimiento.
+
+--two_year_recid: variable objetivo principal; vale 1 si hubo re-arresto/reincidencia observada dentro de dos años y 0 si no.

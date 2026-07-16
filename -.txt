@@ -5,3 +5,7 @@ Crear tabla de correlaciones de todas las columnas
 Empatar KDD con preprocesamiento de propublica/paper
 
 
+
+Analizar RBF para redes fisicamente informadas y usarlo en problemas conocidos para mejorarlos
+Ver cómo se comportan las redes fisicamente informadas en difusión
+Promover el alineamiento de los modelor y analizar como en el FT siga alineada
