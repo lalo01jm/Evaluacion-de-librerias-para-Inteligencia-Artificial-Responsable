@@ -1,0 +1,35 @@
+# Entornos y configuración local
+.venv/
+venv/
+env/
+.env
+.env.*
+
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+.coverage
+htmlcov/
+
+# Jupyter
+.ipynb_checkpoints/
+
+# Editores y sistema operativo
+.vscode/
+.idea/
+.DS_Store
+Thumbs.db
+
+# Empaquetado
+build/
+dist/
+*.egg-info/
+
+# Archivos temporales
+*.log
+*.tmp
+~$*
